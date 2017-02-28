@@ -12,40 +12,24 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 
+
 <script>
-/*
-(document).ready(function(){
-  
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-  // Prevent default anchor click behavior
-  event.preventDefault();
-
-  // Store hash
-  var hash = this.hash;
-
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 690, function(){
-
-    // Add hash (#) to URL when done scrolling (default click behavior)
-    window.location.hash = hash;
-    });
+    
+    $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 600);
+        return false;
+      }
+    }
   });
-})
-*/
-BRUSHED.listenerMenu = function(){
-And add this little method at the bottom:
-
-    // Fix outside links.
-    $('.linkfix_LogIn a').on('click',function() {           
-        window.location.href = "Swaroop_Aradhya_Resume.pdf";  // Change This
 });
-}
-
-</script>
-
-
+    </script>
 
 
 </head>
@@ -79,7 +63,7 @@ And add this little method at the bottom:
 
         <li><a href="#about">ABOUT ME</a></li>
         <li><a href="#project">PROJECTS</a></li>
-        <li><a href="Swaroop Aradhya Resume.pdf"  target="_blank">RESUME</a></li>
+        <li><a href="Resume-Swaroop_Aradhya.pdf"  target="_blank">RESUME</a></li>
         <li class="linkfix_LogIn"><a href="#contact">CONTACT ME</a></li>
       </ul>
     </div>
@@ -226,13 +210,13 @@ My interests are Hiking, Photography, reading company blogs. During free time, I
 <a href="https://github.com/swaroopmc/" target="_blank"><img class="social" src="images/github.png" style="width:50px;height:50px"/></a>&nbsp;&nbsp;&nbsp;
           <a href="http://www.samc19.blogspot.com" target="_blank"><img class="social" src="images/gblogger.png" style="width:50px;height:50px"/></a>&nbsp;&nbsp;&nbsp;			
           
-          <a href="http://instagram.com/mcswaroop19/" target="_blank"><img class="social" src="images/instagram.jpg" style="width:50px;height:50px"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="http://twitter.com/mcswaroop19/" target="_blank"><img class="social" src="images/twitter.png" style="width:50px;height:50px"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="https://unsplash.com/mcswaroop19" target="_blank"><img class="social" src="images/unsplash.png" style="width:50px;height:50px"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="http://www.linkedin.com/in/mcswaroop19/" target="_blank"><img class="social" src="images/linkedin.png" style="width:50px;height:50px"/></a>
           
           <br>
             <br>
-          <a href="mailto:mcswaroop.19@gmail.com"><span class="foot"> Email me </span></a>&nbsp;&nbsp;&nbsp; <a href="Swaroop_Aradhya_Resume.pdf"  target="_blank"><span class="foot"> Resume </span></a>
+          <a href="mailto:mcswaroop.19@gmail.com"><span class="foot"> Email me </span></a>&nbsp;&nbsp;&nbsp; <a href="Resume-Swaroop_Aradhya.pdf"  target="_blank"><span class="foot"> Resume </span></a>
           <br>
           <br>
 
